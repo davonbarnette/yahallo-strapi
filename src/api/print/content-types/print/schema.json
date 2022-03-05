@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prints",
+  "info": {
+    "singularName": "print",
+    "pluralName": "prints",
+    "displayName": "Print",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::card.card"
+    },
+    "discordUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discord-user.discord-user"
+    },
+    "printNumber": {
+      "type": "biginteger"
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "POOR",
+        "GOOD",
+        "EXCELLENT",
+        "MINT"
+      ]
+    }
+  }
+}

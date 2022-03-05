@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drops",
+  "info": {
+    "singularName": "drop",
+    "pluralName": "drops",
+    "displayName": "Drop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prints": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::print.print"
+    },
+    "discordCreatedTimestamp": {
+      "type": "datetime"
+    },
+    "dropDiscordUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discord-user.discord-user"
+    },
+    "discordMessageId": {
+      "type": "string"
+    }
+  }
+}

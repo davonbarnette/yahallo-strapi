@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discord_users",
+  "info": {
+    "singularName": "discord-user",
+    "pluralName": "discord-users",
+    "displayName": "Discord User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "discordUserId": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "discordUser"
+    },
+    "inventory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::inventory.inventory",
+      "inversedBy": "discordUser"
+    }
+  }
+}
